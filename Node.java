@@ -1,0 +1,90 @@
+// class Node {
+//     int data;
+//     Node next; 
+
+//     Node(int d) {
+//         data = d;
+//         next = null;
+//     }
+
+//     // Function to insert at the beginning of the linked list
+//     static Node insertAtBegin(Node head, int data) {
+//         Node nn = new Node(data);
+//         if (head == null) return nn;  // If list is empty, return the new node as head
+//         else {
+//             nn.next = head;
+//             return nn;  // Return the new head
+//         }
+//     }
+
+//     // Function to insert at the end of the linked list
+//     static Node insertAtEnd(Node head, int data) {
+//         Node nn = new Node(data);
+//         if (head == null) return nn;  // If list is empty, return the new node as head
+//         else {
+//             Node temp = head;
+//             while (temp.next != null) {  // Traverse to the end of the list
+//                 temp = temp.next;
+//             }
+//             temp.next = nn;  // Attach the new node at the end
+//             return head;  // Return the original head
+//         }
+//     }
+    
+//     // Function to insert at a specific position in the linked list
+//     static Node insertAtMiddle(Node head, int data, int pos) {
+//         Node nn = new Node(data);
+//         if (pos == 0) {
+//             head = insertAtBegin(head, data);  // Insert at the beginning if position is 0
+//         }
+//         else {
+//             Node temp = head;
+//             int i = 0;
+            
+//             // Traverse to the position before the desired position
+//             while (i < pos - 1 && temp != null && temp.next != null) {
+//                 temp = temp.next;
+//                 i++;
+//             }
+            
+//             // Insert the node at the middle position
+//             if (i == pos - 1 && temp != null) {
+//                 nn.next = temp.next;
+//                 temp.next = nn;
+//             }
+//         }
+//         return head;
+
+
+//     }
+
+//     // Function to print the linked list
+//     static void print(Node head) {
+//         Node temp = head;
+//         while (temp != null) {
+//             System.out.print(temp.data + " -> ");
+//             temp = temp.next;  // Move to the next node
+//         }
+//         System.out.println("NULL");
+//     }
+// }
+
+// public class Main {
+//     public static void main(String[] args) {
+//         Node head = null;
+
+//         // Inserting nodes at the beginning
+//         head = Node.insertAtBegin(head, 10);
+//         head = Node.insertAtBegin(head, 20);
+
+//         // Inserting nodes at the end
+//         head = Node.insertAtEnd(head, 40);
+//         head = Node.insertAtEnd(head, 50);
+        
+//         // Inserting node at a specific position
+//         head = Node.insertAtMiddle(head, 30, 2);  // Insert 30 at position 2
+        
+//         // Printing the linked list
+//         Node.print(head);
+//     }
+// }
