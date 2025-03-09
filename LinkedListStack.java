@@ -33,7 +33,7 @@ class Stack {
         top = top.next;
     }
 
-    // Return top element
+ // Return top element
     public int top() {
         if (isEmpty()) {
             System.out.println("Stack is empty!");
